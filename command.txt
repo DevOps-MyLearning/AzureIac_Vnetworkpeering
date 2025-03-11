@@ -1,0 +1,11 @@
+# First we are going to deploy resources in our Inwayz Bootcamp subscription
+# Be sure to select the Inwayz Cohort 1 subscription for your subname
+# If you are using a different subscription, ensure you change it to your subscription name
+
+az login
+az account show
+az account set --subscription "Cohort 3 Training Subscription"
+
+terraform init
+terraform plan -out vnet.tfplan
+terraform apply "vnet.tfplan"
